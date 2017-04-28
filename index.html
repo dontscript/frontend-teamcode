@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/jquery.particleground.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+<nav class="transparent" style="box-shadow: none;">
+    <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo"> Logo</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="register.html"><i class="material-icons left">person_add</i>Register</a></li>
+            <li><a href="login.html"><i class="material-icons left">person</i>Login</a></li>
+        </ul>
+    </div>
+</nav>
+<div id="particles">
+    <div id="intro">
+        <h1><span id="cursor">Welcome to TeamCode</span></h1>
+        <p class="real-time">IDE Real-time Online</p>
+        <a href="about.html" class="btn-custom"><h5>More</h5></a>
+    </div>
+</div>
+</body>
+<script type="application/javascript">
+    $(document).ready(function () {
+        $(".button-collapse").sideNav({
+            menuWidth: 250, // Default is 300
+            edge: 'left', // Choose the horizontal origin
+            closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+            draggable: true // Choose whether you can drag to open on touch screens
+        });
+        $('#particles').particleground({
+            dotColor: '#b0bec5',
+            lineColor: '#b0bec5'
+        });
+        $('#intro').css({
+            'margin-top': -($('#intro').height() / 2)
+        });
+    });
+</script>
+</html>
